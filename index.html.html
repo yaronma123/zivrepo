@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Everyone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .buttons-container {
+            margin-top: 30px;
+        }
+        .button {
+            background-color: #ff0000;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #cc0000;
+        }
+        #image-container {
+            margin-top: 30px;
+            display: none; /* Initially hidden */
+            text-align: center;
+        }
+        #image-container img {
+            max-width: 100%;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello Everyone!</h1>
+
+    <div class="buttons-container">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <button class="button">Link 1 - YouTube</button>
+        </a>
+        <a href="https://www.ynet.co.il" target="_blank">
+            <button class="button">Link 2 - Ynet</button>
+        </a>
+        <button class="button" onclick="showImage()">Link 3 - Show Image</button>
+    </div>
+
+    <div id="image-container">
+        <img src="" id="cloud-image" alt="Cloud Image">
+    </div>
+
+    <script>
+        function showImage() {
+            var imageUrl = "https://testtostorgae.blob.core.windows.net/test/Capture.PNG?sp=r&st=2024-12-02T08:13:08Z&se=2024-12-02T16:13:08Z&sv=2022-11-02&sr=b&sig=HtcjIQGfVg%2BUpcWPV65nI66UwQADdgzgr5%2Fx1D1AUKo%3D";
+            var imageContainer = document.getElementById("image-container");
+            var imageElement = document.getElementById("cloud-image");
+
+            imageElement.src = imageUrl;  // Set the image source
+            imageContainer.style.display = "block";  // Show the image container
+        }
+    </script>
+
+</body>
+</html>
